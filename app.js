@@ -20,6 +20,7 @@
   //   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   //   next();
   // });
+  
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(logger('dev'));
   app.use(express.json());
@@ -27,7 +28,7 @@
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'public')));
 
-
+  app.use('/', indexRouter);
   app.use('/api/rentedRoom', rentedRoom)
   app.use('/api/locationRoom', locationRoom)
   app.use('/api/bookRoom', bookRoom)
