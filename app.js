@@ -11,17 +11,15 @@
   const bodyParser = require('body-parser');
   var app = express();
   require('dotenv').config()
-
-
   // view engine setup
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'ejs');
 
-  app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+  // app.use(function (req, res, next) {
+  //   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  //   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  //   next();
+  // });
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(logger('dev'));
   app.use(express.json());
