@@ -10,6 +10,8 @@
   var commemt = require('./routes/comment')
   const bodyParser = require('body-parser');
   var app = express();
+  require('dotenv').config()
+
 
   // view engine setup
   app.set('views', path.join(__dirname, 'views'));
