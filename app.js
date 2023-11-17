@@ -9,6 +9,7 @@
   var account = require('./routes/account')
   var commemt = require('./routes/comment')
   const bodyParser = require('body-parser');
+  var indexRouter = require('./routes/index');
   var app = express();
   require('dotenv').config()
   // view engine setup
